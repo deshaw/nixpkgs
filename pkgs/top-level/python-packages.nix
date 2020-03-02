@@ -2498,6 +2498,8 @@ in {
 
   requests-file = callPackage ../development/python-modules/requests-file { };
 
+  requests-gssapi = callPackage ../development/python-modules/requests-gssapi { };
+
   requests-kerberos = callPackage ../development/python-modules/requests-kerberos { };
 
   requests-unixsocket = callPackage ../development/python-modules/requests-unixsocket {};
