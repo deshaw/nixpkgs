@@ -7020,6 +7020,8 @@ in {
     inherit python;
   })).python;
 
+  kobo = callPackage ../development/python-modules/kobo { };
+
   libiio = (toPythonModule (pkgs.libiio.override {
     inherit python;
   })).python;
