@@ -3978,6 +3978,8 @@ in {
 
   pythonIRClib = callPackage ../development/python-modules/pythonirclib { };
 
+  python-iptables = callPackage ../development/python-modules/python-iptables {};
+
   iso-639 = callPackage ../development/python-modules/iso-639 {};
 
   iso3166 = callPackage ../development/python-modules/iso3166 {};
