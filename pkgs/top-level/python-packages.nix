@@ -845,6 +845,8 @@ in {
 
   macropy = callPackage ../development/python-modules/macropy { };
 
+  mailer = callPackage ../development/python-modules/mailer { };
+
   mail-parser = callPackage ../development/python-modules/mail-parser { };
 
   mailman = callPackage ../servers/mail/mailman { };
