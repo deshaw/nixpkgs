@@ -4737,6 +4737,8 @@ in {
 
   pbr = callPackage ../development/python-modules/pbr { };
 
+  fixture = callPackage ../development/python-modules/fixture { };
+
   fixtures = callPackage ../development/python-modules/fixtures { };
 
   fipy = callPackage ../development/python-modules/fipy { };
