@@ -1269,6 +1269,8 @@ in {
 
   python-binance = callPackage ../development/python-modules/python-binance { };
 
+  python-crontab = callPackage ../development/python-modules/python-crontab { };
+
   python-dbusmock = callPackage ../development/python-modules/python-dbusmock { };
 
   python-dotenv = callPackage ../development/python-modules/python-dotenv { };
