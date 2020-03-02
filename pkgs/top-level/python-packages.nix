@@ -129,6 +129,8 @@ in {
 
   py3to2 = callPackage ../development/python-modules/3to2 { };
 
+  py3c = callPackage ../development/python-modules/py3c { };
+
   pynamodb = callPackage ../development/python-modules/pynamodb { };
 
   absl-py = callPackage ../development/python-modules/absl-py { };
