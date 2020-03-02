@@ -3603,6 +3603,8 @@ in {
 
   flask_wtf = callPackage ../development/python-modules/flask-wtf { };
 
+  flask-xml-rpc = callPackage ../development/python-modules/flask-xml-rpc { };
+
   wtforms = callPackage ../development/python-modules/wtforms { };
 
   wtf-peewee = callPackage ../development/python-modules/wtf-peewee { };
