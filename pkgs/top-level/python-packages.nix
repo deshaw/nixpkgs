@@ -1467,6 +1467,8 @@ in {
 
   trueskill = callPackage ../development/python-modules/trueskill { };
 
+  textfsm = callPackage ../development/python-modules/textfsm { };
+
   trustme = callPackage ../development/python-modules/trustme {};
 
   trio = callPackage ../development/python-modules/trio {};
