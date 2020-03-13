@@ -6252,6 +6252,8 @@ in {
 
   zope_proxy = callPackage ../development/python-modules/zope_proxy { };
 
+  pynetfilter_conntrack = callPackage ../development/python-modules/pynetfilter_conntrack { };
+
   zope_schema = callPackage ../development/python-modules/zope_schema { };
 
   zope_size = callPackage ../development/python-modules/zope_size { };

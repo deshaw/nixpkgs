@@ -1,0 +1,44 @@
+diff --git a/pynetfilter_conntrack/conntrack_base.py b/pynetfilter_conntrack/conntrack_base.py
+index 36866b96..5b918848 100644
+--- a/pynetfilter_conntrack/conntrack_base.py
++++ b/pynetfilter_conntrack/conntrack_base.py
+@@ -1,5 +1,5 @@
+ from pynetfilter_conntrack import \
+-    nfct_open, nfct_close
++    nfct_open, nfct_close, nfct_fd
+ from pynetfilter_conntrack.ctypes_errno import get_errno
+ from os import strerror
+ 
+@@ -38,5 +38,9 @@ class ConntrackBase(object):
+         nfct_close(self.handle)
+         self.handle = None
+ 
++    @property
++    def fd(self):
++        return nfct_fd(self.handle)
++
+ __all__ = ('ConntrackBase',)
+ 
+diff --git a/pynetfilter_conntrack/func.py b/pynetfilter_conntrack/func.py
+index b95d51ae..cf3d4e81 100644
+--- a/pynetfilter_conntrack/func.py
++++ b/pynetfilter_conntrack/func.py
+@@ -204,6 +204,10 @@ nfct_conntrack_compare.restype = c_int
+ 
+ # -------------------------------------------------------------------------
+ 
++nfct_fd = library.nfct_fd
++nfct_fd.argtypes = (nfct_handle_p,)
++nfct_fd.restype = c_int
++
+ __all__ = (
+     "nfct_handle_p", "nfct_callback_t",
+     "nfct_new", "nfct_destroy", "nfct_open", "nfct_close", "nfct_query",
+@@ -211,6 +215,6 @@ __all__ = (
+     "nfct_clone", "nfct_snprintf", "nfct_catch", "nfct_setobjopt",
+     "nfct_get_attr", "nfct_get_attr_u8", "nfct_get_attr_u16", "nfct_get_attr_u32",
+     "nfct_set_attr", "nfct_set_attr_u8", "nfct_set_attr_u16", "nfct_set_attr_u32",
+-    "nfct_conntrack_compare_t", "nfct_conntrack_compare",
++    "nfct_conntrack_compare_t", "nfct_conntrack_compare", "nfct_fd",
+ )
+ 
