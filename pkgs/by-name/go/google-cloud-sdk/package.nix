@@ -158,6 +158,8 @@ stdenv.mkDerivation rec {
       mv $path.min $path
     done
 
+    $out/bin/gcloud components post-process --force-recompile
+
     runHook postInstall
   '';
 
