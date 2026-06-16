@@ -49,14 +49,14 @@ let
 in
 buildPythonPackage rec {
   pname = "parsedmarc";
-  version = "9.6.0";
+  version = "9.11.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "domainaware";
     repo = "parsedmarc";
     tag = version;
-    hash = "sha256-ez7QMFsSvJzxhfCPA4G6oGQhqAzcgKBTJMiMogIJvNg=";
+    hash = "sha256-2+TRkso2vcS1xWi20p6kAXaJ6jTSglQH+l6PIoqZltw=";
   };
 
   postPatch = ''
@@ -82,17 +82,10 @@ buildPythonPackage rec {
     elasticsearch
     elasticsearch-dsl
     expiringdict
-    geoip2
-    google-api-core
-    google-api-python-client
-    google-auth
-    google-auth-httplib2
-    google-auth-oauthlib
-    imapclient
     kafka-python-ng
     lxml
     mailsuite
-    msgraph-core
+    maxminddb
     opensearch-py
     publicsuffixlist
     pygelf
@@ -121,7 +114,5 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     maintainers = with lib.maintainers; [ talyz ];
     mainProgram = "parsedmarc";
-    # https://github.com/domainaware/parsedmarc/issues/464
-    broken = lib.versionAtLeast msgraph-core.version "1.0.0";
   };
 }
